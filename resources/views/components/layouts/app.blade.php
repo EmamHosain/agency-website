@@ -55,7 +55,7 @@
                         <li class="nav-item"><a class="nav-link" wire:navigate href="{{ route('faq_page') }}">FAQ</a>
                         </li>
                     </ul>
-                    <a href="{{ url('/contact') }}" class="btn btn-outline-primary">Contact Us</a>
+                    <a wire:navigate href="{{route('contact_us_page') }}" class="btn btn-outline-primary">Contact Us</a>
                 </div>
             </div>
         </nav>
