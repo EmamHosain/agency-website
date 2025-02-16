@@ -68,6 +68,7 @@ class FaqResource extends Resource
                         '0' => 'Blocked',
                     ])
             ])
+            ->defaultSort('id', 'desc') // Set default sorting by ID in descending order
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])

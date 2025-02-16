@@ -46,7 +46,7 @@ class ServiceResource extends Resource
                     ->options([
                         '1' => 'Active',
                         '0' => 'Block',
-                    ])->required()->default(0),
+                    ])->required()->default(1),
             ]);
     }
 
@@ -65,6 +65,7 @@ class ServiceResource extends Resource
             ->filters([
                 //
             ])
+            ->defaultSort('id', 'desc') // Set default sorting by ID in descending order
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])

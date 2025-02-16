@@ -84,6 +84,7 @@ class MemberResource extends Resource
                     ->color(fn($state) => $state == 1 ? 'success' : 'danger'),
 
             ])
+            ->defaultSort('id', 'desc') // Set default sorting by ID in descending order
             ->filters([
                 //
             ])

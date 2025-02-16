@@ -25,7 +25,7 @@ class MemberFactory extends Factory
             'fb_url' => $this->faker->optional()->url(),
             'inst_url' => $this->faker->optional()->url(),
             'twi_url' => $this->faker->optional()->url(),
-            'image' => 'members/' . $this->faker->image('public/storage/', 200, 200, null, false),
+            'image' =>  $this->faker->image(200, 200, null, false),
             'status' => $this->faker->randomElement([0, 1]), // 0 = inactive, 1 = active
         ];
     }

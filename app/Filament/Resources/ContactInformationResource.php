@@ -48,6 +48,7 @@ class ContactInformationResource extends Resource
                 TextColumn::make('message'),
 
             ])
+            ->defaultSort('id', 'desc') // Set default sorting by ID in descending order
             ->filters([
                 //
             ])

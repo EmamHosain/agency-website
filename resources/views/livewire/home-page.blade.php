@@ -51,7 +51,6 @@
             </div>
         </div>
     </div>
-
     <section class="banner bg-tertiary position-relative overflow-hidden">
         <div class="container">
             <div class="row align-items-center justify-content-center">

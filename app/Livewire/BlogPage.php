@@ -50,12 +50,14 @@ class BlogPage extends Component
         // Get the categories and tags for the sidebar
         $categories = Category::withCount('articles')->where('status', 1)->get();
         $all_tags = Tag::where('status', 1)->get();
+        $latest_article = Article::where('status',1)->orderByDesc('id')->limit(3)->get();
 
         // Return the view with the variables
         return view('livewire.blog-page', [
             'articles' => $articles,
             'categories' => $categories,
             'all_tags' => $all_tags,
+            'latest_article'=> $latest_article
         ]);
     }
 

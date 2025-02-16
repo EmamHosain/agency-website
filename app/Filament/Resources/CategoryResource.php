@@ -74,6 +74,7 @@ class CategoryResource extends Resource
                         }
                     })
             ])
+            ->defaultSort('id', 'desc') // Set default sorting by ID in descending order
             ->filters([
                 //
             ])

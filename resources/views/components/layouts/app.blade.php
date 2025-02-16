@@ -82,7 +82,7 @@
 
 
                             <li class="mb-2">
-                                <a wire:navigate href="{{ route('serviceDetails',$item->id) }}">{{ $item->title }}</a>
+                                <a wire:navigate href="{{ route('serviceDetails',$item->id) }}">{{ ucwords($item->title) }}</a>
                             </li>
                             @endforeach
                             @else
