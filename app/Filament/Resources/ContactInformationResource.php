@@ -6,6 +6,7 @@ use App\Filament\Resources\ContactInformationResource\Pages;
 use App\Filament\Resources\ContactInformationResource\RelationManagers;
 use App\Models\ContactInformation;
 use Filament\Forms;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -25,9 +26,16 @@ class ContactInformationResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')->required(),
-                TextInput::make('email')->required(),
-                TextInput::make('message')->required(),
+                TextInput::make('name')
+                ->placeholder('Enter contact name')
+                    ->required(),
+                TextInput::make('email')
+                ->placeholder('Enter contact email')
+                    ->required(),
+                Textarea::make('message')
+                ->placeholder('Enter contact message')
+                ->columnSpanFull()
+                    ->required(),
             ]);
     }
 
